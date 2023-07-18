@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Clinic Management System</title>
+
+
+   
+</head>
+<body>
+    {{>navbar}}
+
+<div class="container-fluid mt-5 contact-style">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+          <img src="images/reg_bg.svg" alt="" />
+
+          <h1 class="text-center main-heading">Registration Form</h1>
+         
+          <div class="row">
+            <div class="col-md-6 col-12 mx-auto">
+    <form action="/register" method="POST" >
+   <div class="mb-3 ">
+    <label for="exampleInputPassword1" class="form-label"><span class="bold-style">Name</span></label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Full Name" name="name">
+  </div>                 
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email" name="email">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password" name="password">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="ReEnter your password" name="confirmpassword">
+  </div>
+  <div class="mb-3">
+  <label for="roles">Select your role:</label>
+
+<select name="roles" id="roles">
+  <option value="patient">Patient</option>
+  <option value="doctor">Doctor</option>
+  <option value="admin">Admin</option>
+</select></div>
+  <button type="submit" class="btn btn-primary">REGISTER</button>
+</form>
+            </div>
+    </div>
+</div>
+<script src="../jq/jquery.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>
